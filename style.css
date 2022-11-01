@@ -17,6 +17,7 @@ body {
   pointer-events: none !important;
   box-shadow: 0 0 16px rgba(255, 255, 255, 0);
 }
+
 .mouse-circle-selected {
   width: 464px !important;
   height: 464px !important;
@@ -38,7 +39,7 @@ body {
   --swiper-theme-color: #000000;
 }
 
-h2{
+h2 {
   font-size: 2vw;
 }
 
@@ -80,6 +81,7 @@ h2{
   font-family: 'montserrat', 'medium';
   white-space: pre-line;
 }
+
 .container {
   position: relative;
 }
@@ -90,7 +92,8 @@ h2{
   cursor: pointer;
 }
 
-.person-img, .country-img {
+.person-img,
+.country-img {
   position: absolute;
   width: 30%;
   left: 60%;
@@ -112,18 +115,20 @@ h2{
   width: 100%;
   font-size: 4rem;
 }
+
 .item p {
   width: 100%;
-  font-size: 1.5rem;  
+  font-size: 1.5rem;
 }
-#laptopcan{
+
+#laptopcan {
   margin-top: 0px;
   display: flex;
   align-items: center;
 }
 
 
-#laptop-control{
+#laptop-control {
   font-size: 8vw;
   position: absolute;
   display: flex;
@@ -195,28 +200,31 @@ h2{
   font-family: 'montserrat', 'medium';
   font-size: 2.5vw;
 }
+
 #experience ul {
   text-decoration: none;
   list-style-type: none;
 }
-#experience ul li{
+
+#experience ul li {
   margin-top: 0px;
 }
 
-h2{
+h2 {
   margin-left: 10%;
   margin-top: 0px;
   font-size: 3vw;
 }
-#clients{
+
+#clients {
   width: 80%;
   margin: 0px auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
- 
-.brand{
+
+.brand {
   width: 33.3%;
   height: 20vw;
   background-color: #fdfdfd;
@@ -226,11 +234,12 @@ h2{
   justify-content: center;
   align-items: center;
 }
-.brand img{
+
+.brand img {
   width: 60%;
 }
 
-footer{
+footer {
   background-color: #252525;
   color: #fdfdfd;
   font-size: 2vw;
@@ -238,8 +247,34 @@ footer{
   font-family: 'montserrat';
   font-style: italic;
 }
-footer span{
+
+footer span {
   font-style: normal;
+}
+
+footer p {
+  font-size: 0.5vw;
+  text-align: center;
+}
+
+header {
+  z-index: 11;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0%;
+  align-items: center;
+  width: 80%;
+  left: 10%;
+}
+header ul li{
+  float: left;
+  margin-left: 20px;
+  list-style: none;
+}
+header a{
+  text-decoration: none;
+  color: #000000;
 }
 
 
@@ -250,57 +285,72 @@ footer span{
     width: 90%;
     font-size: 3rem;
   }
+
   .carousel {
     margin-top: 0px;
   }
+
   .item:nth-child(1) {
     margin-left: 5%;
   }
+
   .item h1 {
     font-size: 3rem;
-  } 
-  .item p {
-    font-size: 1rem;  
   }
-  #laptopcan{
+
+  .item p {
+    font-size: 1rem;
+  }
+
+  #laptopcan {
     margin-top: 0px;
   }
 }
+
 @media screen and (max-width: 868px) {
   #about {
     width: 90%;
     font-size: 1.5rem;
   }
+
   .container div:first-child {
     margin-top: 0;
   }
+
   .item h1 {
     font-size: 1.5rem !important;
-  } 
-  .item p {
-    font-size: 0.7rem;  
   }
-  #experience ul li{
+
+  .item p {
+    font-size: 0.7rem;
+  }
+
+  #experience ul li {
     margin-top: 0px;
   }
+
   #experience {
     width: 100%;
     margin: 0px auto;
     font-family: 'montserrat', 'medium';
     font-size: 4.5vw;
   }
+
   #testimonial-title {
     width: 0%;
   }
+
   .swiper {
     width: 100vw;
     margin: 0;
-  }  
-  #laptopcan{
+  }
+
+  #laptopcan {
     display: flex;
     align-items: center;
-  }  
-  h2{
+  }
+
+  h2 {
     font-size: 4vw;
   }
 }

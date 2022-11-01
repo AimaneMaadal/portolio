@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&display=swap');
+
 body {
   margin: 0;
   font-family: 'montserrat';
@@ -52,6 +53,17 @@ h2 {
   font-family: 'montserrat', 'medium';
   font-size: 3.5rem;
 }
+
+#about sup {
+  font-size: 2rem;
+}
+
+#about a{
+  color: #000000;
+  text-decoration: none;
+}
+
+
 
 .container {
   width: 100%;
@@ -268,12 +280,14 @@ header {
   width: 80%;
   left: 10%;
 }
-header ul li{
+
+header ul li {
   float: left;
   margin-left: 20px;
   list-style: none;
 }
-header a{
+
+header a {
   text-decoration: none;
   color: #000000;
 }
@@ -285,6 +299,10 @@ header a{
   #about {
     width: 90%;
     font-size: 3rem;
+  }
+
+  #about sup {
+    font-size: 1.5rem;
   }
 
   .carousel {
@@ -312,6 +330,9 @@ header a{
   #about {
     width: 90%;
     font-size: 1.5rem;
+  }
+  #about sup {
+    font-size: 0.8rem;
   }
 
   .container div:first-child {

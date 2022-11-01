@@ -41,8 +41,8 @@ let Mesh = null;
 
 //add a pointlight
 let light2 = new THREE.PointLight(0xffffff, 5, 100);
-light2.position.set(2, 10, 3);
-let light = new THREE.AmbientLight(0xffffff, 2);
+light2.position.set(2, 50, 3);
+let light = new THREE.AmbientLight(0xffffff, 1);
 scene.add(light, light2);
 
 var scale = 1.5;
@@ -51,6 +51,14 @@ renderer.setSize(sizes.width, sizes.height);
 scene.background = new THREE.Color('#FFFFFF');
 document.body.appendChild(renderer.domElement);
 camera.position.z = 5;
+
+//create plane geometry
+var geometry = new THREE.PlaneGeometry(7.7, 5, 1, 1);
+var material = new THREE.MeshBasicMaterial({
+  color: 0x000000,
+  side: THREE.DoubleSide,
+  radius: 0.5,
+});
 
 
 var animate = function () {
@@ -79,21 +87,31 @@ window.addEventListener('resize', onWindowResize, false);
 window.addEventListener('mousemove', onMouseMove, false);
 
 function onWindowResize() {
-  renderer.setSize(window.innerWidth, 600);
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
 }
 
 var work = 0;
 
 document.querySelector('#prevwork').addEventListener('click', () => {
+  if (work == 0) {
+    work = 2;
+  }
+  let currentwork = 'Scherm'+work;
   Mesh.traverse((child) => {
-    if (child.name === 'Scherm') {
-      var loader = new THREE.TextureLoader();
-      loader.load("/model/texture.png", function (texture) {
-        child.material.map = texture;
-        child.material.needsUpdate = true;
-      });
+    if (child.name.includes('Scherm')) {
+      child.visible = false;
     }
+    if (child.name.includes('start')) {
+      child.visible = false;
+    }
+    if (child.name == currentwork) {
+      child.visible = true;
+    }
+    console.log(currentwork);
   });
+  work--;
 });
 
 
@@ -108,6 +126,7 @@ console.log(childern);
 
 const name = childern[4],
   country = childern[24],
+  city = childern[48],
   personImg = document.querySelector(".person-img"),
   countryImg = document.querySelector(".country-img");
 
@@ -145,6 +164,16 @@ country.addEventListener("mouseover", () => {
 });
 
 country.addEventListener("mouseleave", () => {
+  document.getElementById("mouse-circle").style.backgroundImage = "none";
+  document.getElementById("mouse-circle").classList.remove("mouse-circle-selected");
+});
+
+city.addEventListener("mouseover", () => {
+  document.getElementById("mouse-circle").style.backgroundImage = "url('/images/dino.png')";
+  document.getElementById("mouse-circle").classList.add("mouse-circle-selected");
+});
+
+city.addEventListener("mouseleave", () => {
   document.getElementById("mouse-circle").style.backgroundImage = "none";
   document.getElementById("mouse-circle").classList.remove("mouse-circle-selected");
 });

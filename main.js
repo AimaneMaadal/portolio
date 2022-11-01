@@ -130,7 +130,7 @@ window.addEventListener("mousemove", (e) => {
 
 
 name.addEventListener("mouseover", () => {
-  document.getElementById("mouse-circle").style.backgroundImage = "url('https://images.pexels.com/photos/93827/pexels-photo-93827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')";
+  document.getElementById("mouse-circle").style.backgroundImage = "url('/images/me.gif')";
   document.getElementById("mouse-circle").classList.add("mouse-circle-selected");
 });
 
@@ -140,7 +140,7 @@ name.addEventListener("mouseleave", () => {
 });
 
 country.addEventListener("mouseover", () => {
-  document.getElementById("mouse-circle").style.backgroundImage = "url('https://images.pexels.com/photos/93827/pexels-photo-93827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')";
+  document.getElementById("mouse-circle").style.backgroundImage = "url('/images/imd.png')";
   document.getElementById("mouse-circle").classList.add("mouse-circle-selected");
 });
 

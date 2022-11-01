@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+<script type="module" src="/main.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+    
+<body>
+  <header>Aimane.dev</header>
+  <img
+  class="person-img"
+  src="https://images.pexels.com/photos/93827/pexels-photo-93827.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+/>
+<img
+src="https://images.pexels.com/photos/2413613/pexels-photo-2413613.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+class="country-img"
+/>
+  <div id="about">
+    <p data-textify id="about-text">
+      Hello! Im <span>Aimane</span> a Web developer student based in Antwerp. ↙ I’m currently studying <span>Interactive Multimedia Design</span> at
+      ThomasMore Mechelen. In addition I’m part of a inhouse agency called Dinosource where i work with clients on creative digital products.
+      I’m specialized in Frontend, backend and have a huge passion for design. For further information, inquiries &
+      collaboration contact me here. (email)
+    </p>
+  </div>
+  <div class="container">
+    <div data-aos="fade-up" class="carousel">
+      <div class="item">
+        <h1>Every minute counts.</h1>
+        <p>I turn in my work on time. Do not call when you are busy. I can listen to you every day</p>
+      </div>
+      <div class="item">
+        <h1>Communication is key</h1>
+        <p>I turn in my work on time. Do not call when you are busy. I can listen to you every day</p>
+      </div>
+      <div class="item">
+        <h1>Quality above quantity</h1>
+        <p>I turn in my work on time. Do not call when you are busy. I can listen to you every day</p>
+      </div>
+    </div>
+  </div>
+
+  <div data-aos="flip-up" data-aos-duration="1000" data-aos-easing="ease-out" id="laptopcan"></div>
+  <div id="laptop-control"><span id="prevwork">‹</span> <span id="nextwork">›</span></div>
+  <canvas id="my-work"></canvas>
+  
+  
+  <div data-aos="fade-up" >
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/1.png" alt="">
+          <p>Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard
+            proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en
+            ze door elkaar husselde om een font-catalogus te maken.</p>
+          <span><b>Rogbert Janssens -</b> HTML studios</span>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/1.png" alt="">
+          <p>Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard
+            proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en
+            ze door elkaar husselde om een font-catalogus te maken.</p>
+          <span><b>Rogbert Janssens -</b> HTML studios</span>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/1.png" alt="">
+          <p>Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard
+            proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en
+            ze door elkaar husselde om een font-catalogus te maken.</p>
+          <span><b>Rogbert Janssens -</b> HTML studios</span>
+        </div>
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div id="testimonial-title"><span>Testimonial</span></div>
+  </div>
+
+  <div id="experience">
+    <ul>
+      <li><b>Programming teacher @ </b> CodeFever 2022- present</li>
+      <br>
+      <li><b>Full stack developer @ </b> Designosource agency 2022- present</li>
+    </ul>
+  </div>
+  <br><br>
+  <div>
+    <h2 data-textify>They could be my clients,<br> but they don't know about me yet.</h2>
+    <div id="clients">
+      <div class="brand"><img src="/images/brands/samsung.svg"></div>
+      <div class="brand"><img src="/images/brands/harvard.svg"></div>
+      <div class="brand"><img src="/images/brands/adidas2.svg"></div>
+
+      <div class="brand"><img src="/images/brands/meta.svg"></div>
+      <div class="brand"><img src="/images/brands/telenet.svg"></div>
+      <div class="brand"><img src="/images/brands/microsoft.svg"></div>
+    </div>
+  </div>
+
+  <footer>
+    <h1>Get in touch<br><span>aimanemaadal@gmail.com</span></h1>
+  </footer>
+  <div id="mouse-circle"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      // autoplay: {
+      //   delay: 2500,
+      //   disableOnInteraction: false,
+      // },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
+</body>
+
+</html>

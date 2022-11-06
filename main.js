@@ -8,7 +8,9 @@ import {
 
 var myCanvas = document.getElementById("my-work");
 
-AOS.init(  {duration: 1000, } );
+AOS.init({
+  duration: 1000,
+});
 
 
 
@@ -40,7 +42,7 @@ var renderer = new THREE.WebGLRenderer({
 let Mesh = null;
 
 //add a pointlight
-let light2 = new THREE.PointLight(0xffffff, 5, 100);
+let light2 = new THREE.PointLight(0xffffff, 4, 200);
 light2.position.set(2, 50, 3);
 let light = new THREE.AmbientLight(0xffffff, 1);
 scene.add(light, light2);
@@ -76,7 +78,11 @@ function onMouseMove(event) {
 
 gltfLoader.load('/model/laptop.gltf', (gltf) => {
   Mesh = gltf.scene;
-  Mesh.scale.set(scale, scale, scale);
+  if (window.innerWidth < 768) {
+    Mesh.scale.set(0.5, 0.5, 0.5);
+  } else {
+    Mesh.scale.set(scale, scale, scale);
+  }
   Mesh.position.set(0, -1, 0);
   scene.add(Mesh);
 })
@@ -90,15 +96,24 @@ function onWindowResize() {
   renderer.setSize(window.innerWidth, window.innerHeight);
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
+  if (window.innerWidth < 1208) {
+    document.getElementById("laptopcan").style.display = "none !important";
+    document.getElementById("laptopcan2").style.display = "block !important";
+  }
+  else {
+    document.getElementById("laptopcan").style.display = "block !important";
+    document.getElementById("laptopcan2").style.display = "none !important";
+  }
+
 }
 
-var work = 0;
+var work = 1;
 
 document.querySelector('#prevwork').addEventListener('click', () => {
   if (work == 0) {
     work = 2;
   }
-  let currentwork = 'Scherm'+work;
+  let currentwork = 'Scherm' + work;
   Mesh.traverse((child) => {
     if (child.name.includes('Scherm')) {
       child.visible = false;
@@ -113,6 +128,47 @@ document.querySelector('#prevwork').addEventListener('click', () => {
   });
   work--;
 });
+document.querySelector('#nextwork').addEventListener('click', () => {
+  if (work == 3) {
+    work = 1;
+  }
+  let currentwork = 'Scherm' + work;
+  Mesh.traverse((child) => {
+    if (child.name.includes('Scherm')) {
+      child.visible = false;
+    }
+    if (child.name.includes('start')) {
+      child.visible = false;
+    }
+    if (child.name == currentwork) {
+      child.visible = true;
+    }
+    console.log(currentwork);
+  });
+  work++;
+});
+
+
+var work2 = 1;
+
+document.querySelector('#nextwork2').addEventListener('click', () => {
+  if (work2 == 4) {
+    work2 = 1;
+  }
+  let currentwork = 'proj' + work2;
+  document.querySelector('#laptopcan2').style.backgroundImage = "url('/images/" + currentwork + ".png')";
+  work2++;
+});
+document.querySelector('#prevwork2').addEventListener('click', () => {
+  if (work2 == 0) {
+    work2 = 3;
+  }
+  let currentwork = 'proj' + work2;
+  document.querySelector('#laptopcan2').style.backgroundImage = "url('/images/" + currentwork + ".png')";
+  work2--;
+});
+
+
 
 
 //get second span inside element with id "my-work"
@@ -134,7 +190,7 @@ window.addEventListener("mousemove", (e) => {
   let x = e.clientX / window.innerWidth;
   let y = e.clientY / window.innerHeight;
 
-  
+
   if (e.target.classList.contains("name")) {
     personImg.style.left = `${x}px`;
     personImg.style.top = `${y}px`;
@@ -181,28 +237,26 @@ city.addEventListener("mouseleave", () => {
 
 if (window.matchMedia("(min-width: 768px)").matches) {
   let mousePosX = 0,
-      mousePosY = 0,
-      mouseCircle = document.getElementById("mouse-circle");
+    mousePosY = 0,
+    mouseCircle = document.getElementById("mouse-circle");
 
   document.onmousemove = (e) => {
-      mousePosX = e.pageX;
-      mousePosY = e.pageY;
+    mousePosX = e.pageX;
+    mousePosY = e.pageY;
   };
 
   let delay = 3,
-      revisedMousePosX = 0,
-      revisedMousePosY = 0;
+    revisedMousePosX = 0,
+    revisedMousePosY = 0;
 
   function delayMouseFollow() {
-      requestAnimationFrame(delayMouseFollow);
+    requestAnimationFrame(delayMouseFollow);
 
-      revisedMousePosX += (mousePosX - revisedMousePosX) / delay;
-      revisedMousePosY += (mousePosY - revisedMousePosY) / delay;
+    revisedMousePosX += (mousePosX - revisedMousePosX) / delay;
+    revisedMousePosY += (mousePosY - revisedMousePosY) / delay;
 
-      mouseCircle.style.top = revisedMousePosY + "px";
-      mouseCircle.style.left = revisedMousePosX + "px";
+    mouseCircle.style.top = revisedMousePosY + "px";
+    mouseCircle.style.left = revisedMousePosX + "px";
   }
   delayMouseFollow();
 }
-
-

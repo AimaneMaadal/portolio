@@ -7,6 +7,7 @@ body {
   flex-direction: column;
   gap: 5vw;
   overflow-x: hidden;
+  cursor: none;
 }
 
 #mouse-circle {
@@ -58,7 +59,7 @@ h2 {
   font-size: 2rem;
 }
 
-#about a{
+#about a {
   color: #000000;
   text-decoration: none;
 }
@@ -141,6 +142,23 @@ h2 {
 }
 
 
+#laptopcan2 {
+  margin-top: 0px;
+  height: 80vh;
+  font-size: 10vw;
+  background-image: url("/images/start.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 50% 50%;
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0px auto;
+  display: none !important;
+}
+
+
 #laptop-control {
   font-size: 8vw;
   position: absolute;
@@ -148,6 +166,7 @@ h2 {
   justify-content: space-between;
   width: 80%;
   margin-left: 10%;
+  z-index: 6969;
 }
 
 
@@ -200,7 +219,7 @@ h2 {
 
 #testimonial-title span {
   display: inline-block;
-  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
   font-size: 4vw;
   position: relative;
   color: white;
@@ -240,9 +259,7 @@ h2 {
 .brand {
   width: 33.3%;
   height: 20vw;
-  background-color: #fdfdfd;
   font-size: 2vw;
-  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -272,13 +289,17 @@ footer p {
 
 header {
   z-index: 11;
-  position: fixed;
   display: flex;
   justify-content: space-between;
-  padding: 20px 0%;
+  padding: 0px 0%;
   align-items: center;
   width: 80%;
-  left: 10%;
+  margin-left: 10%;
+  height: 10vh;
+}
+
+#backbone {
+  height: 10vh;
 }
 
 header ul li {
@@ -299,6 +320,12 @@ header a {
   #about {
     width: 90%;
     font-size: 3rem;
+    cursor: pointer;
+  }
+
+  header {
+    width: 90%;
+    margin-left: 5%;
   }
 
   #about sup {
@@ -322,7 +349,19 @@ header a {
   }
 
   #laptopcan {
-    margin-top: 0px;
+    display: none !important;
+  }
+
+  #my-work {
+    scale: 0.8;
+  }
+
+  .carousel {
+    background-size: 18%;
+  }
+
+  #laptopcan2 {
+    display: flex !important;
   }
 }
 
@@ -331,6 +370,7 @@ header a {
     width: 90%;
     font-size: 1.5rem;
   }
+
   #about sup {
     font-size: 0.8rem;
   }
@@ -340,11 +380,16 @@ header a {
   }
 
   .item h1 {
-    font-size: 1.5rem !important;
+    font-size: 2rem !important;
   }
 
   .item p {
-    font-size: 0.7rem;
+    font-size: 1.2rem;
+  }
+
+  .brand {
+    width: 50%;
+    height: 40vw
   }
 
   #experience ul li {
@@ -367,9 +412,8 @@ header a {
     margin: 0;
   }
 
-  #laptopcan {
-    display: flex;
-    align-items: center;
+  .carousel {
+    background-size: 28%;
   }
 
   h2 {

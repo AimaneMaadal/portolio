@@ -6,7 +6,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5vw;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   cursor: none;
 }
 
@@ -19,6 +19,7 @@ body {
   border-radius: 50%;
   pointer-events: none !important;
   box-shadow: 0 0 16px rgba(255, 255, 255, 0);
+  z-index: 999999;
 }
 
 .mouse-circle-selected {
@@ -275,10 +276,17 @@ footer {
   font-size: 2vw;
   padding: 30px 10%;
   font-family: 'montserrat';
+
+}
+
+footer h1 {
+  font-weight: 300;
   font-style: italic;
 }
 
 footer span {
+  font-style: normal;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -313,6 +321,78 @@ header a {
   color: #000000;
 }
 
+#mobile-menu {
+  display: none;
+}
+
+#menu-div {
+  display: none;
+  height: 90vh;
+  width: 100vw;
+  background-color: #252525;
+  text-align: center;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10vh;
+  z-index: 999;
+}
+
+#menu-div a {
+  color: #fdfdfd;
+  font-size: 8vw;
+  font-weight: 700;
+  text-decoration: none;
+  display: block;
+}
+#contact{
+  display: none;
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 6969;
+}
+#contact-info{
+  display: flex;
+  flex-direction: column;
+  font-size: 8vw;
+  font-weight: 900;
+}
+#contact-info a{
+  color: black;
+  text-decoration: none;
+}
+#close{
+  font-size: 5vw;
+  position: absolute;
+  top: 0px;
+  left: 88%;
+}
+
+@keyframes menuin {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes menuout {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 
 /* Tablet */
 
@@ -320,12 +400,20 @@ header a {
   #about {
     width: 90%;
     font-size: 3rem;
-    cursor: pointer;
+  }
+
+  body {
+    cursor: default;
+  }
+
+  #mouse-circle {
+    border: none;
   }
 
   header {
     width: 90%;
-    margin-left: 5%;
+    margin-left: 0;
+    padding: 0% 5%;
   }
 
   #about sup {
@@ -363,12 +451,24 @@ header a {
   #laptopcan2 {
     display: flex !important;
   }
+
+  #experience {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 868px) {
   #about {
     width: 90%;
     font-size: 1.5rem;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  #mobile-menu {
+    display: block;
   }
 
   #about sup {
@@ -385,6 +485,10 @@ header a {
 
   .item p {
     font-size: 1.2rem;
+  }
+
+  .item {
+    width: 49%;
   }
 
   .brand {
@@ -418,5 +522,37 @@ header a {
 
   h2 {
     font-size: 4vw;
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 508px) {
+  #laptopcan2 {
+    height: 30vh;
+    background-size: 90%;
+  }
+
+  .item {
+    width: 68%;
+  }
+
+  h2 {
+    font-size: 4.5vw;
+  }
+
+  .brand img {
+    width: 80%;
+  }
+
+  footer {
+    font-size: 2.5vw;
+  }
+
+  footer p {
+    font-size: 1.5vw;
+  }
+
+  #about {
+    font-size: 1.2rem;
   }
 }

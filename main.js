@@ -13,9 +13,6 @@ AOS.init({
 });
 
 
-
-
-
 const example = new Textify({
   delay: 0,
   rotation: 15,
@@ -63,6 +60,7 @@ var material = new THREE.MeshBasicMaterial({
 });
 
 
+
 var animate = function () {
   requestAnimationFrame(animate);
   renderer.render(scene, camera);
@@ -104,7 +102,7 @@ function onWindowResize() {
     document.getElementById("laptopcan").style.display = "block !important";
     document.getElementById("laptopcan2").style.display = "none !important";
   }
-
+  // window.location.reload();
 }
 
 var work = 1;
@@ -168,7 +166,36 @@ document.querySelector('#prevwork2').addEventListener('click', () => {
   work2--;
 });
 
+var menu = false;
 
+document.querySelector('#menu-mobile').addEventListener('click', () => {
+  if (menu == false) {
+    showmenu();
+    menu = true;
+  }
+  else if (menu == true) {
+    hidemenu();
+    menu = false;
+  }
+});
+
+
+function hidemenu() {
+  document.querySelector('header').style.backgroundColor = "transparent";
+  document.querySelector('#menu-div').style.display = "none";
+  document.querySelector('#menu-mobile').style.color = "#000000";
+  document.querySelector('#menu-mobile').innerHTML = "menu";
+  document.querySelector('#logo-name').innerHTML = "aimane.dev";
+  document.body.style.overflow = "auto";
+}
+function showmenu() {
+  document.querySelector('header').style.backgroundColor = "#252525";
+  document.querySelector('#menu-div').style.display = "flex";
+  document.querySelector('#menu-mobile').style.color = "#ffffff";
+  document.querySelector('#menu-mobile').innerHTML = "close";
+  document.querySelector('#logo-name').innerHTML = "";
+  document.body.style.overflow = "hidden";
+}
 
 
 //get second span inside element with id "my-work"
@@ -200,8 +227,6 @@ window.addEventListener("mousemove", (e) => {
     countryImg.style.top = `${y}px`;
   }
 });
-
-
 
 
 name.addEventListener("mouseover", () => {
@@ -260,3 +285,22 @@ if (window.matchMedia("(min-width: 768px)").matches) {
   }
   delayMouseFollow();
 }
+
+
+document.querySelector('#contact-btn').addEventListener('click', () => {
+  document.querySelector('#contact').style.display = "block";
+  document.body.style.overflow = "hidden";
+});
+
+
+document.querySelector('#contact-btn2').addEventListener('click', () => {
+  document.querySelector('#contact').style.display = "block";
+  document.body.style.overflow = "hidden";
+  hidemenu();
+});
+
+document.querySelector('#close').addEventListener('click', () => {
+  document.querySelector('#contact').style.display = "none";
+  document.body.style.overflow = "auto";
+});
+ 

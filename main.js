@@ -102,7 +102,7 @@ function onWindowResize() {
     document.getElementById("laptopcan").style.display = "block !important";
     document.getElementById("laptopcan2").style.display = "none !important";
   }
-  // window.location.reload();
+  window.location.reload();
 }
 
 var work = 1;
@@ -323,3 +323,13 @@ document.querySelector('footer').addEventListener('mouseleave', () => {
 document.querySelector('#contact').addEventListener('mouseleave', () => {
   document.getElementById("mouse-circle").style.borderColor = "#000000";
 });
+
+//get horizontal scroll positsion of div with id container
+var container = document.getElementById("container");
+var scrollLeft = container.scrollLeft;
+
+
+while (container.scrollLeft < 1000) {
+  console.log(scrollLeft);
+}
+

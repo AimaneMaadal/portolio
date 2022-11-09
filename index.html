@@ -11,7 +11,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
 
 <body data-aos="fade-up">
   <div id="contact">
@@ -49,7 +48,7 @@
       <div><a data-textify href="index.html">Home</a></div>
       <div><a data-textify href="/aboutme/index.html">About me</a></div>
       <div><a data-textify href="/mywork/index.html">My work</a></div>
-      <div><a href="#" id="contact-btn2">Contact</a></div>
+      <div><a data-textify href="#" id="contact-btn2">Contact</a></div>
     </div>
     <div id="about">
       <p data-textify id="about-text">
@@ -63,7 +62,7 @@
       </p>
     </div>
   </div>
-  <div class="container">
+  <!-- <div class="container">
     <div data-aos="fade-up" class="carousel">
       <div class="item">
         <h1>Every minute counts.</h1>
@@ -76,6 +75,29 @@
       <div class="item">
         <h1>Quality above quantity</h1>
         <p>I turn in my work on time. Do not call when you are busy. I can listen to you every day</p>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="swiper mySwiper2" id="values" style="width: 90vw;">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="item">
+          <h1>Quality above quantity</h1>
+          <p>Focusing on quantity instead of quality promotes nothing but the wrong priorities in life.</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="item">
+          <h1>Communication is key</h1>
+          <p>Effective communication ensures that the team works efficiently and takes the right actions to complete the project on time and fulfill expectations.</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="item">
+          <h1>Work hard play Hard!</h1>
+          <p>People with a strong work ethic value their professional success. They exhibit moral principles that make them excellent employees in any job.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -94,22 +116,28 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <img src="images/1.webp" alt="">
-          <p>Aimane is an incredibly talented developer. But he is even more than that. He is the foundation of every project. His talent to single-handedly lead an entire project is what inspires those around him. Above all, his work ethic is like no other. His fear of missing out is what fuels him every day. He is the type I would always want in a future project.</p>
+          <p>Aimane is an incredibly talented developer. But he is even more than that. He is the foundation of every
+            project. His talent to single-handedly lead an entire project is what inspires those around him. Above all,
+            his work ethic is like no other. His fear of missing out is what fuels him every day. He is the type I would
+            always want in a future project.</p>
           <span><b>Ismail El Ghamri -</b> Student</span>
         </div>
 
         <div class="swiper-slide">
           <img src="images/2.webp" alt="">
-          <p>I have been working with or alongside Aimane for the past 3 years. Without a doubt I can say that he is one of the most talented developers I know. He learns quickly, is flexible, and never says no to anyone who asks for his help. I am grateful to call him my peer and I can guarantee that he will always deliver quality products.</p>
-          <span><b>Alejandro De Wolf -</b> Student</span>
+          <p>I have been working with or alongside Aimane for the past 3 years. Without a doubt I can say that he is one
+            of the most talented developers I know. He learns quickly, is flexible, and never says no to anyone who asks
+            for his help. I am grateful to call him my peer and I can guarantee that he will always deliver quality
+            products.</p>
+          <span><b>Alevaluesdro De Wolf -</b> Student</span>
         </div>
 
         <div class="swiper-slide">
           <img src="images/3.webp" alt="">
-          <p>I have worked with Aimane on a few projects. He writes codes like he breathes air. He is always the person who pushes everyone around him to do their best. He doesn't hesitate for a second to help anyone.</p>
+          <p>I have worked with Aimane on a few projects. He writes codes like he breathes air. He is always the person
+            who pushes everyone around him to do their best. He doesn't hesitate for a second to help anyone.</p>
           <span><b>Boysangur Khadjiev -</b> Student</span>
         </div>
-
       </div>
       <div class="swiper-pagination"></div>
     </div>
@@ -138,7 +166,8 @@
   </div>
 
   <footer>
-    <h1>Get in touch<br><span><a href="mailto:aimanemaadal@gmail.com" style="text-decoration: none; color: white;">aimanemaadal@gmail.com</a></span></h1>
+    <h1>Get in touch<br><span><a href="mailto:aimanemaadal@gmail.com"
+          style="text-decoration: none; color: white;">aimanemaadal@gmail.com</a></span></h1>
     <p>All rights reserved Aimane Maadal</p>
   </footer>
   <div id="mouse-circle"></div>
@@ -161,6 +190,10 @@
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+    });
+    var swiper2 = new Swiper("#values", {
+      slidesPerView: 2,
+      freeMode: true,
     });
   </script>
 

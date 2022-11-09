@@ -204,6 +204,7 @@
       #mobile-menu {
         display: block;
       }
+
       #close {
         font-size: 15vw;
       }
@@ -294,7 +295,7 @@
 
       <h2>Downloads</h2>
       <hr>
-      <a href="../documents/cv_aimanemaadal.pdf" download>Download CV</a>
+      <a href="../documents/cv.pdf" download>Download CV</a>
       <br>
 
     </div>
@@ -386,6 +387,11 @@
       document.querySelector('#contact').style.display = "none";
       document.body.style.overflow = "auto";
     });
+    window.addEventListener('resize', onWindowResize, false);
+
+    function onWindowResize() {
+      window.location.reload();
+    }
   </script>
 </body>
 

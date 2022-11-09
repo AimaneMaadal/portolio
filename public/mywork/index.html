@@ -21,6 +21,7 @@
     }
 
     #mouse-circle {
+      display: block;
       position: absolute;
       width: 64px;
       height: 64px;
@@ -148,7 +149,8 @@
       text-decoration: none;
       display: block;
     }
-    #container a{
+
+    #container a {
       text-decoration: none;
       color: #000000;
     }
@@ -159,6 +161,10 @@
         width: 90%;
         margin-left: 0;
         padding: 0% 5%;
+      }
+
+      #container {
+        width: 90%;
       }
     }
 
@@ -177,6 +183,13 @@
 
       #close {
         font-size: 15vw;
+      }
+
+      #container {
+        gap: 10vw;
+      }
+      #mouse-circle {
+        display: none;
       }
     }
   </style>
@@ -224,7 +237,7 @@
     <a href="https://blendr-eat.netlify.app/">
       <div id="project1">
         <div>Blendr Web app schoolproject</div>
-        <div>UX/UI - PHP - MYSQL - Projectmanagement</div>
+        <div>UX/UI - PHP - MYSQL</div>
       </div>
     </a>
     <a href="https://aimane.dev/">
@@ -265,6 +278,7 @@
     </a>
   </div>
 
+  <br><br><br><br><br><br><br><br><br><br>
 
   <div id="mouse-circle"></div>
 
@@ -419,6 +433,13 @@
       document.getElementById("mouse-circle").style.backgroundImage = "none";
       document.getElementById("mouse-circle").classList.remove("mouse-circle-selected");
     });
+
+    window.addEventListener('resize', onWindowResize, false);
+
+    function onWindowResize() {
+      window.location.reload();
+    }
+    
   </script>
 </body>
 

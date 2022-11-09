@@ -87,10 +87,20 @@ h2 {
   background-size: 8%;
   background-position: 70% 50%;
 }
+#values{
+  background-image: url("/images/drag.gif");
+  background-repeat: no-repeat;
+  background-size: 8%;
+  background-position: 70% 50%;
+}
+#values .swiper-slide{
+  height: 450px;
+}
 
 .item {
   display: inline-block;
-  width: 40%;
+  width: 100%;
+  text-align: left;
   margin: 0 40px;
   height: 380px;
   font-family: 'montserrat', 'medium';
@@ -183,7 +193,6 @@ h2 {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -460,7 +469,7 @@ header a {
 @media screen and (max-width: 868px) {
   #about {
     width: 90%;
-    font-size: 1.5rem;
+    font-size: 1.9rem;
   }
 
   #menu {
@@ -558,6 +567,6 @@ header a {
   }
 
   #about {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 }

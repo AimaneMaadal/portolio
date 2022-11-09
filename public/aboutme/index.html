@@ -6,9 +6,209 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>about me</title>
-  <script type="module" src="script.js"></script>
-  <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/textify.js@1.2.0/dist/Textify.min.js"></script>
+  <style>
+    body {
+      font-family: 'montserrat', 'medium';
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    header a {
+      font-size: 16px;
+    }
+
+    #left1 {
+      /* background: rgb(254, 254, 254); */
+      position: fixed;
+      left: 10%;
+      top: 15vh;
+      bottom: 0;
+      width: 35%;
+      overflow: hidden;
+    }
+
+    #left1 img {
+      width: 100%;
+    }
+
+    h2 {
+      padding: 0% !important;
+      margin: 0% !important;
+
+    }
+
+    #right h3 {
+      font-size: 1.2vw !important;
+    }
+
+    h4 {
+      font-size: 1vw !important;
+    }
+
+    #right1 {
+      /* background: rgb(248, 248, 248); */
+      position: absolute;
+      left: 45%;
+      top: 15vh;
+      bottom: 0;
+      right: 0;
+      width: 40%;
+      overflow-y: auto;
+      min-height: 1700px;
+      padding: 0px 2.5% 0px 2.5%;
+    }
+
+    header ul li {
+      float: left;
+      margin-left: 20px;
+      list-style: none;
+    }
+
+    header a {
+      text-decoration: none;
+      color: #000000;
+    }
+
+    header {
+      z-index: 11;
+      display: flex;
+      justify-content: space-between;
+      padding: 0px 0%;
+      align-items: center;
+      width: 80%;
+      margin-left: 10%;
+      height: 10vh;
+    }
+
+
+    #mouse-circle {
+      position: absolute;
+      width: 64px;
+      height: 64px;
+      margin: -32px 0px 0px -32px;
+      border: 1px solid #000000;
+      border-radius: 50%;
+      pointer-events: none !important;
+      box-shadow: 0 0 16px rgba(255, 255, 255, 0);
+      z-index: 999999;
+    }
+
+    .mouse-circle-selected {
+      width: 30vw !important;
+      height: 30vw !important;
+      border-radius: 0% !important;
+      transition: all 0.4s ease;
+      margin: 0 !important;
+      border: none !important;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transform: translate(-50%, -50%);
+    }
+
+
+    #contact {
+      display: none;
+      background-color: rgb(11, 11, 11);
+      color: #fdfdfd !important;
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      z-index: 6969;
+    }
+
+    #contact-info {
+      display: flex;
+      flex-direction: column;
+      font-size: 8vw;
+      font-weight: 900;
+    }
+
+    #contact-info a {
+      color: black;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    #close {
+      font-size: 5vw;
+      position: absolute;
+      top: 0px;
+      left: 88%;
+    }
+
+    #mobile-menu {
+      display: none;
+    }
+
+    #menu-div {
+      display: none;
+      height: 90vh;
+      width: 100vw;
+      background-color: rgb(11, 11, 11);
+      text-align: center;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10vh;
+      z-index: 999;
+    }
+
+    #menu-div a {
+      color: #fdfdfd;
+      font-size: 8vw;
+      font-weight: 700;
+      text-decoration: none;
+      display: block;
+    }
+
+
+
+    @media screen and (max-width: 1208px) {
+      #left1 {
+        left: 5%;
+        width: 40%;
+      }
+
+      #right1 {
+        left: 45%;
+        width: 45%;
+      }
+
+      header {
+        width: 90%;
+        margin-left: 0;
+        padding: 0% 5%;
+      }
+    }
+
+    @media screen and (max-width: 868px) {
+      #left1 {
+        display: none;
+      }
+
+      #right1 {
+        left: 2.5%;
+        width: 90%;
+      }
+
+      #menu {
+        display: none;
+      }
+
+      #mobile-menu {
+        display: block;
+      }
+      #close {
+        font-size: 15vw;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -35,21 +235,23 @@
     </div>
     <div id="menu">
       <ul>
+        <li><a href="../index.html">Home</a></li>
         <li><a href="/aboutme/index.html">About me</a></li>
-        <!-- <li><a href="/mywork/index.html">My Work</a></li> -->
+        <li><a href="/mywork/index.html">My Work</a></li>
         <li><a href="#" id="contact-btn">Contact</a></li>
       </ul>
     </div>
   </header>
   <div id="menu-div">
-    <div><a data-textify href="#about">About me</a></div>
-    <!-- <div><a data-textify href="#projects">My work</a></div> -->
+    <div><a data-textify href="../index.html">Home</a></div>
+    <div><a data-textify href="/aboutme/index.html">About me</a></div>
+    <div><a data-textify href="/mywork/index.html">My work</a></div>
     <div><a data-textify href="#" id="contact-btn2">Contact</a></div>
   </div>
 
   <div id="container">
     <div id="left1">
-      <img src="../images/me-static.png" alt="aimane">
+      <img src="../images/me-static.webp" alt="aimane">
     </div>
     <div id="right1">
       <h2>Experience</h2>
@@ -69,42 +271,122 @@
         building my hard skills, but working daily to
         improve my project management and
         communication skills</p>
-        <br>
+      <br>
 
-        <h2>Studies</h2>
-        <hr>
-        <h3>ICT<sup>&nbsp; 2017 - 2019</sup></h3>
-        <p>High school diploma</p>
-        <h3>Interactive Multimedia Design<sup>&nbsp; 2020 - Ongoing</sup></h3>
-        <p>Currently in my second year of this bachelor's degree</p>
-        <br>
+      <h2>Studies</h2>
+      <hr>
+      <h3>ICT<sup>&nbsp; 2017 - 2019</sup></h3>
+      <p>High school diploma</p>
+      <h3>Interactive Multimedia Design<sup>&nbsp; 2020 - Ongoing</sup></h3>
+      <p>Currently in my second year of this bachelor's degree</p>
+      <br>
 
-        <h2>Skills</h2>
-        <hr>
-        <p>HTML, CSS</p>
-        <p>Bootstrap, tailwind</p>
-        <p>PHP, Symfony, MySQL</p>
-        <p>JavaScript, ES6, Node.js</p>
-        <p>Wordprss, Elementor</p>
-        <p>Java</p>
-        <p>Adobe XD, Photoshop, Illustrator</p>
-        <br>
+      <h2>Skills</h2>
+      <hr>
+      <p>HTML, CSS</p>
+      <p>Bootstrap, tailwind</p>
+      <p>PHP, Symfony, MySQL</p>
+      <p>JavaScript, ES6, Node.js</p>
+      <p>Wordprss, Elementor</p>
+      <p>Java</p>
+      <p>Adobe XD, Photoshop, Illustrator</p>
+      <br>
 
-        <h2>Downloads</h2>
-        <hr>
-        <a href="../documents/cv_aimanemaadal.pdf" download>Download CV</a>
-        <br>
+      <h2>Downloads</h2>
+      <hr>
+      <a href="../documents/cv_aimanemaadal.pdf" download>Download CV</a>
+      <br>
 
     </div>
   </div>
 
-
-
-
-
-
   <div id="mouse-circle"></div>
 
+
+  <script>
+    const example = new Textify({
+      delay: 0,
+      rotation: 15,
+    });
+
+    var menu = false;
+
+    document.querySelector('#menu-mobile').addEventListener('click', () => {
+      if (menu == false) {
+        showmenu();
+        menu = true;
+      } else if (menu == true) {
+        hidemenu();
+        menu = false;
+      }
+    });
+
+    function hidemenu() {
+      document.querySelector('header').style.backgroundColor = "transparent";
+      document.querySelector('#menu-div').style.display = "none";
+      document.querySelector('#menu-mobile').style.color = "#000000";
+      document.querySelector('#menu-mobile').innerHTML = "menu";
+      document.querySelector('#logo-name').innerHTML = "aimane.dev";
+      document.querySelector('#right1').style.display = "block";
+      document.body.style.backgroundColor = "#ffffff";
+      document.body.style.overflow = "auto";
+    }
+
+    function showmenu() {
+      document.querySelector('header').style.backgroundColor = "#0B0B0B";
+      document.querySelector('#menu-div').style.display = "flex";
+      document.querySelector('#menu-mobile').style.color = "#ffffff";
+      document.querySelector('#menu-mobile').innerHTML = "close";
+      document.querySelector('#logo-name').innerHTML = "";
+      document.querySelector('#right1').style.display = "none";
+      document.body.style.backgroundColor = "#252525";
+      document.body.style.overflow = "hidden";
+    }
+
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      let mousePosX = 0,
+        mousePosY = 0,
+        mouseCircle = document.getElementById("mouse-circle");
+
+      document.onmousemove = (e) => {
+        mousePosX = e.pageX;
+        mousePosY = e.pageY;
+      };
+
+      let delay = 3,
+        revisedMousePosX = 0,
+        revisedMousePosY = 0;
+
+      function delayMouseFollow() {
+        requestAnimationFrame(delayMouseFollow);
+
+        revisedMousePosX += (mousePosX - revisedMousePosX) / delay;
+        revisedMousePosY += (mousePosY - revisedMousePosY) / delay;
+
+        mouseCircle.style.top = revisedMousePosY + "px";
+        mouseCircle.style.left = revisedMousePosX + "px";
+      }
+      delayMouseFollow();
+    }
+
+
+    document.querySelector('#contact-btn').addEventListener('click', () => {
+      document.querySelector('#contact').style.display = "block";
+      document.body.style.overflow = "hidden";
+    });
+
+
+    document.querySelector('#contact-btn2').addEventListener('click', () => {
+      document.querySelector('#contact').style.display = "block";
+      document.body.style.overflow = "hidden";
+      hidemenu();
+    });
+
+    document.querySelector('#close').addEventListener('click', () => {
+      document.querySelector('#contact').style.display = "none";
+      document.body.style.overflow = "auto";
+    });
+  </script>
 </body>
 
 </html>

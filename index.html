@@ -38,6 +38,7 @@
       </div>
       <div id="menu">
         <ul>
+          <li><a href="index.html">Home</a></li>
           <li><a href="/aboutme/index.html">About me</a></li>
           <li><a href="/mywork/index.html">My Work</a></li>
           <li><a href="#" id="contact-btn">Contact</a></li>
@@ -45,8 +46,9 @@
       </div>
     </header>
     <div id="menu-div">
+      <div><a data-textify href="index.html">Home</a></div>
       <div><a data-textify href="/aboutme/index.html">About me</a></div>
-      <!-- <div><a data-textify href="#projects">My work</a></div> -->
+      <div><a data-textify href="/mywork/index.html">My work</a></div>
       <div><a href="#" id="contact-btn2">Contact</a></div>
     </div>
     <div id="about">
@@ -91,27 +93,21 @@
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="images/1.png" alt="">
-          <p>Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard
-            proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en
-            ze door elkaar husselde om een font-catalogus te maken.</p>
-          <span><b>Rogbert Janssens -</b> HTML studios</span>
+          <img src="images/1.webp" alt="">
+          <p>Aimane is an incredibly talented developer. But he is even more than that. He is the foundation of every project. His talent to single-handedly lead an entire project is what inspires those around him. Above all, his work ethic is like no other. His fear of missing out is what fuels him every day. He is the type I would always want in a future project.</p>
+          <span><b>Ismail El Ghamri -</b> Student</span>
         </div>
 
         <div class="swiper-slide">
-          <img src="images/1.png" alt="">
-          <p>Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard
-            proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en
-            ze door elkaar husselde om een font-catalogus te maken.</p>
-          <span><b>Rogbert Janssens -</b> HTML studios</span>
+          <img src="images/2.webp" alt="">
+          <p>I have been working with or alongside Aimane for the past 3 years. Without a doubt I can say that he is one of the most talented developers I know. He learns quickly, is flexible, and never says no to anyone who asks for his help. I am grateful to call him my peer and I can guarantee that he will always deliver quality products.</p>
+          <span><b>Alejandro De Wolf -</b> Student</span>
         </div>
 
         <div class="swiper-slide">
-          <img src="images/1.png" alt="">
-          <p>Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard
-            proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en
-            ze door elkaar husselde om een font-catalogus te maken.</p>
-          <span><b>Rogbert Janssens -</b> HTML studios</span>
+          <img src="images/3.webp" alt="">
+          <p>I have worked with Aimane on a few projects. He writes codes like he breathes air. He is always the person who pushes everyone around him to do their best. He doesn't hesitate for a second to help anyone.</p>
+          <span><b>Boysangur Khadjiev -</b> Student</span>
         </div>
 
       </div>
@@ -142,7 +138,7 @@
   </div>
 
   <footer>
-    <h1>Get in touch<br><span>aimanemaadal@gmail.com</span></h1>
+    <h1>Get in touch<br><span><a href="mailto:aimanemaadal@gmail.com" style="text-decoration: none; color: white;">aimanemaadal@gmail.com</a></span></h1>
     <p>All rights reserved Aimane Maadal</p>
   </footer>
   <div id="mouse-circle"></div>
@@ -153,10 +149,10 @@
     var swiper = new Swiper(".mySwiper", {
       spaceBetween: 30,
       centeredSlides: true,
-      // autoplay: {
-      //   delay: 2500,
-      //   disableOnInteraction: false,
-      // },
+      autoplay: {
+        delay: 5500,
+        disableOnInteraction: false,
+      },
       pagination: {
         el: ".swiper-pagination",
         clickable: true,

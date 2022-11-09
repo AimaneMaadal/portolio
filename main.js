@@ -74,7 +74,7 @@ function onMouseMove(event) {
   Mesh.rotation.y = mouse.x * 0.1;
 }
 
-gltfLoader.load('/model/laptop.gltf', (gltf) => {
+gltfLoader.load('/images/laptop.gltf', (gltf) => {
   Mesh = gltf.scene;
   if (window.innerWidth < 768) {
     Mesh.scale.set(0.5, 0.5, 0.5);
@@ -154,7 +154,7 @@ document.querySelector('#nextwork2').addEventListener('click', () => {
     work2 = 1;
   }
   let currentwork = 'proj' + work2;
-  document.querySelector('#laptopcan2').style.backgroundImage = "url('/images/" + currentwork + ".png')";
+  document.querySelector('#laptopcan2').style.backgroundImage = "url('/images/" + currentwork + ".webp')";
   work2++;
 });
 document.querySelector('#prevwork2').addEventListener('click', () => {
@@ -162,7 +162,7 @@ document.querySelector('#prevwork2').addEventListener('click', () => {
     work2 = 3;
   }
   let currentwork = 'proj' + work2;
-  document.querySelector('#laptopcan2').style.backgroundImage = "url('/images/" + currentwork + ".png')";
+  document.querySelector('#laptopcan2').style.backgroundImage = "url('/images/" + currentwork + ".webp')";
   work2--;
 });
 
@@ -240,7 +240,7 @@ name.addEventListener("mouseleave", () => {
 });
 
 country.addEventListener("mouseover", () => {
-  document.getElementById("mouse-circle").style.backgroundImage = "url('/images/imd.png')";
+  document.getElementById("mouse-circle").style.backgroundImage = "url('/images/imd.webp')";
   document.getElementById("mouse-circle").classList.add("mouse-circle-selected");
 });
 
@@ -250,7 +250,7 @@ country.addEventListener("mouseleave", () => {
 });
 
 city.addEventListener("mouseover", () => {
-  document.getElementById("mouse-circle").style.backgroundImage = "url('/images/dino.png')";
+  document.getElementById("mouse-circle").style.backgroundImage = "url('/images/dino.gif')";
   document.getElementById("mouse-circle").classList.add("mouse-circle-selected");
 });
 
@@ -304,3 +304,22 @@ document.querySelector('#close').addEventListener('click', () => {
   document.body.style.overflow = "auto";
 });
  
+
+
+document.querySelector('footer').addEventListener('mouseover', () => {
+  document.getElementById("mouse-circle").style.borderColor = "#ffffff";
+});
+
+document.querySelector('#contact').addEventListener('mouseover', () => {
+  document.getElementById("mouse-circle").style.borderColor = "#ffffff";
+});
+
+//if mouse leaves footer change border color back to black
+document.querySelector('footer').addEventListener('mouseleave', () => {
+  document.getElementById("mouse-circle").style.borderColor = "#000000";
+});
+
+//if mouse leaves footer change border color back to black
+document.querySelector('#contact').addEventListener('mouseleave', () => {
+  document.getElementById("mouse-circle").style.borderColor = "#000000";
+});

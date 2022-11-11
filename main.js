@@ -102,7 +102,7 @@ function onWindowResize() {
     document.getElementById("laptopcan").style.display = "block !important";
     document.getElementById("laptopcan2").style.display = "none !important";
   }
-  window.location.reload();
+  hidemenu();
 }
 
 var work = 1;

@@ -9,6 +9,8 @@
   <script src="https://cdn.jsdelivr.net/npm/textify.js@1.2.0/dist/Textify.min.js"></script>
   <link rel="icon" type="image/webp" href="/images/icon.webp" />
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&display=swap');
+
     body {
       font-family: 'montserrat', 'medium';
       margin: 0;
@@ -441,9 +443,6 @@
     function onWindowResize() {
       hidemenu();
     }
-    document.querySelector('footer').addEventListener('mouseover', () => {
-      document.getElementById("mouse-circle").style.borderColor = "#ffffff";
-    });
 
     document.querySelector('#contact').addEventListener('mouseover', () => {
       document.getElementById("mouse-circle").style.borderColor = "#ffffff";

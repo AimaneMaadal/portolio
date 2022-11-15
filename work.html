@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>my work</title>
+  <script src="https://cdn.jsdelivr.net/npm/textify.js@1.2.0/dist/Textify.min.js"></script>
+  <link rel="icon" type="image/webp" href="/images/icon.webp" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&display=swap');
+
+    body {
+      font-family: 'montserrat', 'medium';
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      cursor: none;
+    }
+
+    header a {
+      font-size: 16px;
+    }
+
+    #mouse-circle {
+      display: block;
+      position: absolute;
+      width: 64px;
+      height: 64px;
+      margin: -32px 0px 0px -32px;
+      border: 1px solid #000000;
+      border-radius: 50%;
+      pointer-events: none !important;
+      box-shadow: 0 0 16px rgba(255, 255, 255, 0);
+      z-index: 999999;
+    }
+
+    .mouse-circle-selected {
+      width: 30vw !important;
+      height: 30vw !important;
+      border-radius: 0% !important;
+      transition: all 0.4s ease;
+      margin: 0 !important;
+      border: none !important;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transform: translate(-50%, -50%);
+    }
+
+
+    #container {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      margin: 5vw auto;
+      gap: 3vw;
+    }
+
+    #container div {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 10px;
+      border-bottom: 1px solid;
+    }
+
+    #container div div {
+      border: none;
+    }
+
+
+
+
+
+    header ul li {
+      float: left;
+      margin-left: 20px;
+      list-style: none;
+    }
+
+    header a {
+      text-decoration: none;
+      color: #000000;
+    }
+
+    header {
+      z-index: 11;
+      display: flex;
+      justify-content: space-between;
+      padding: 0px 0%;
+      align-items: center;
+      width: 80%;
+      margin-left: 10%;
+      height: 10vh;
+    }
+
+    #contact {
+      display: none;
+      background-color: rgb(11, 11, 11);
+      color: #fdfdfd !important;
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      z-index: 6969;
+    }
+
+    #contact-info {
+      display: flex;
+      flex-direction: column;
+      font-size: 8vw;
+      font-weight: 900;
+    }
+
+    #contact-info a {
+      color: black;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    #close {
+      font-size: 5vw;
+      position: absolute;
+      top: 0px;
+      left: 88%;
+    }
+
+    #mobile-menu {
+      display: none;
+    }
+
+    #menu-div {
+      display: none;
+      height: 90vh;
+      width: 100vw;
+      background-color: rgb(11, 11, 11);
+      text-align: center;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10vh;
+      z-index: 999;
+    }
+
+    #menu-div a {
+      color: #fdfdfd;
+      font-size: 8vw;
+      font-weight: 700;
+      text-decoration: none;
+      display: block;
+    }
+
+    #container a {
+      text-decoration: none;
+      color: #000000;
+    }
+
+
+    @media screen and (max-width: 1208px) {
+      header {
+        width: 90%;
+        margin-left: 0;
+        padding: 0% 5%;
+      }
+
+      #container {
+        width: 90%;
+      }
+    }
+
+    @media screen and (max-width: 868px) {
+      #menu {
+        display: none;
+      }
+
+      #mobile-menu {
+        display: block;
+      }
+
+      body {
+        cursor: default;
+      }
+
+      #close {
+        font-size: 15vw;
+      }
+
+      #container {
+        gap: 10vw;
+      }
+
+      #mouse-circle {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="contact">
+    <span id="close">&times;</span>
+    <div id="contact-info">
+      <div data-textify>
+        <a href="tel:+32489672743">+32 489 67 27 43</a>
+      </div>
+      <div data-textify>
+        <a href="mailto:aimanemaadal@gmail.com">Mail me</a>
+      </div>
+      <div data-textify>
+        <a href="https://www.linkedin.com/in/aimane-maadal-7aa43b1b9/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+  <header data-aos="fade-up">
+    <div>
+      <h3 id="logo-name"><a href="index.html">aimane.dev</a></h3>
+    </div>
+    <div id="mobile-menu">
+      <u id="menu-mobile">Menu</u>
+    </div>
+    <div id="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutme.html">About me</a></li>
+        <li><a href="mywork.html">My Work</a></li>
+        <li><a href="#" id="contact-btn">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+  <div id="menu-div">
+    <div><a data-textify href="index.html">Home</a></div>
+    <div><a data-textify href="aboutme.html">About me</a></div>
+    <div><a data-textify href="mywork.html">My work</a></div>
+    <div><a data-textify href="#" id="contact-btn2">Contact</a></div>
+  </div>
+
+  <div id="container">
+    <a href="https://blendr-eat.netlify.app/">
+      <div id="project1">
+        <div>Blendr Web app schoolproject</div>
+        <div>UX/UI - PHP - MYSQL</div>
+      </div>
+    </a>
+    <a href="https://aimane.dev/">
+      <div id="project2">
+        <div>Portfolio</div>
+        <div>UX/UI - HTML - CSS</div>
+      </div>
+    </a>
+    <a href="https://legacy-portfolio-aimane.netlify.app/">
+      <div id="project3">
+        <div>Legacy portfolio</div>
+        <div>UX/UI - HTML - CSS</div>
+      </div>
+    </a>
+    <a href="https://donut-murex.vercel.app/">
+      <div id="project4">
+        <div>3D donut + coffee</div>
+        <div>Three.js - Blender</div>
+      </div>
+    </a>
+    <a href=" https://css-stress-garden.netlify.app/">
+      <div id="project5">
+        <div>CSS Zen Garden</div>
+        <div>CSS</div>
+      </div>
+    </a>
+    <a href="https://fantasticfox.netlify.app/">
+      <div id="project6">
+        <div>Fantastic Mr.Fox Animated movie poster</div>
+        <div>CSS - JS</div>
+      </div>
+    </a>
+    <a href="https://www.behance.net/gallery/146793191/Workshop-Poster">
+      <div id="project7">
+        <div>Workshop poster</div>
+        <div>Ilustrator</div>
+      </div>
+    </a>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br>
+
+  <div id="mouse-circle"></div>
+
+
+  <script>
+    const example = new Textify({
+      delay: 0,
+      rotation: 15,
+    });
+
+    var menu = false;
+
+    document.querySelector('#menu-mobile').addEventListener('click', () => {
+      if (menu == false) {
+        showmenu();
+        menu = true;
+      } else if (menu == true) {
+        hidemenu();
+        menu = false;
+      }
+    });
+
+    function hidemenu() {
+      document.querySelector('header').style.backgroundColor = "transparent";
+      document.querySelector('#menu-div').style.display = "none";
+      document.querySelector('#menu-mobile').style.color = "#000000";
+      document.querySelector('#menu-mobile').innerHTML = "menu";
+      document.querySelector('#logo-name').innerHTML = "aimane.dev";
+      document.querySelector('#right1').style.display = "block";
+      document.body.style.backgroundColor = "#ffffff";
+      document.body.style.overflow = "auto";
+    }
+
+    function showmenu() {
+      document.querySelector('header').style.backgroundColor = "#0B0B0B";
+      document.querySelector('#menu-div').style.display = "flex";
+      document.querySelector('#menu-mobile').style.color = "#ffffff";
+      document.querySelector('#menu-mobile').innerHTML = "close";
+      document.querySelector('#logo-name').innerHTML = "";
+      document.querySelector('#right1').style.display = "none";
+      document.body.style.backgroundColor = "#252525";
+      document.body.style.overflow = "hidden";
+    }
+
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      let mousePosX = 0,
+        mousePosY = 0,
+        mouseCircle = document.getElementById("mouse-circle");
+
+      document.onmousemove = (e) => {
+        mousePosX = e.pageX;
+        mousePosY = e.pageY;
+      };
+
+      let delay = 3,
+        revisedMousePosX = 0,
+        revisedMousePosY = 0;
+
+      function delayMouseFollow() {
+        requestAnimationFrame(delayMouseFollow);
+
+        revisedMousePosX += (mousePosX - revisedMousePosX) / delay;
+        revisedMousePosY += (mousePosY - revisedMousePosY) / delay;
+
+        mouseCircle.style.top = revisedMousePosY + "px";
+        mouseCircle.style.left = revisedMousePosX + "px";
+      }
+      delayMouseFollow();
+    }
+
+
+    document.querySelector('#contact-btn').addEventListener('click', () => {
+      document.querySelector('#contact').style.display = "block";
+      document.body.style.overflow = "hidden";
+    });
+
+
+    document.querySelector('#contact-btn2').addEventListener('click', () => {
+      document.querySelector('#contact').style.display = "block";
+      document.body.style.overflow = "hidden";
+      hidemenu();
+    });
+
+    document.querySelector('#close').addEventListener('click', () => {
+      document.querySelector('#contact').style.display = "none";
+      document.body.style.overflow = "auto";
+    });
+
+
+    project1 = document.querySelector('#project1');
+    project2 = document.querySelector('#project2');
+    project3 = document.querySelector('#project3');
+    project4 = document.querySelector('#project4');
+    project5 = document.querySelector('#project5');
+    project6 = document.querySelector('#project6');
+    project7 = document.querySelector('#project7');
+
+
+    project1.addEventListener("mouseover", () => {
+      document.getElementById("mouse-circle").style.backgroundImage = "url('/images/show1.webp')";
+      document.getElementById("mouse-circle").classList.add("mouse-circle-selected");
+    });
+    project1.addEventListener("mouseleave", () => {
+      document.getElementById("mouse-circle").style.backgroundImage = "none";
+      document.getElementById("mouse-circle").classList.remove("mouse-circle-selected");
+    });
+    project2.addEventListener("mouseover", () => {
+      document.getElementById("mouse-circle").style.backgroundImage = "url('/images/show2.webp')";
+      document.getElementById("mouse-circle").classList.add("mouse-circle-selected");
+    });
+    project2.addEventListener("mouseleave", () => {
+      document.getElementById("mouse-circle").style.backgroundImage = "none";
+      document.getElementById("mouse-circle").classList.remove("mouse-circle-selected");
+    });
+    project3.addEventListener("mouseover", () => {
+      document.getElementById("mouse-circle").style.backgroundImage = "url('/images/show3.webp')";
+      document.getElementById("mouse-circle").classList.add("mouse-circle-selected");
+    });
+    project3.addEventListener("mouseleave", () => {
+      document.getElementById("mouse-circle").style.backgroundImage = "none";
+      document.getElementById("mouse-circle").classList.remove("mouse-circle-selected");
+    });
+    project4.addEventListener("mouseover", () => {
+      document.getElementById("mouse-circle").style.backgroundImage = "url('/images/show4.webp')";
+      document.getElementById("mouse-circle").classList.add("mouse-circle-selected");
+    });
+    project4.addEventListener("mouseleave", () => {
+      document.getElementById("mouse-circle").style.backgroundImage = "none";
+      document.getElementById("mouse-circle").classList.remove("mouse-circle-selected");
+    });
+    project5.addEventListener("mouseover", () => {
+      document.getElementById("mouse-circle").style.backgroundImage = "url('/images/show5.webp')";
+      document.getElementById("mouse-circle").classList.add("mouse-circle-selected");
+    });
+    project5.addEventListener("mouseleave", () => {
+      document.getElementById("mouse-circle").style.backgroundImage = "none";
+      document.getElementById("mouse-circle").classList.remove("mouse-circle-selected");
+    });
+    project6.addEventListener("mouseover", () => {
+      document.getElementById("mouse-circle").style.backgroundImage = "url('/images/show6.webp')";
+      document.getElementById("mouse-circle").classList.add("mouse-circle-selected");
+    });
+    project6.addEventListener("mouseleave", () => {
+      document.getElementById("mouse-circle").style.backgroundImage = "none";
+      document.getElementById("mouse-circle").classList.remove("mouse-circle-selected");
+    });
+    project7.addEventListener("mouseover", () => {
+      document.getElementById("mouse-circle").style.backgroundImage = "url('/images/show7.webp')";
+      document.getElementById("mouse-circle").classList.add("mouse-circle-selected");
+    });
+    project7.addEventListener("mouseleave", () => {
+      document.getElementById("mouse-circle").style.backgroundImage = "none";
+      document.getElementById("mouse-circle").classList.remove("mouse-circle-selected");
+    });
+
+    window.addEventListener('resize', onWindowResize, false);
+
+    function onWindowResize() {
+      hidemenu();
+    }
+
+    document.querySelector('#contact').addEventListener('mouseover', () => {
+      document.getElementById("mouse-circle").style.borderColor = "#ffffff";
+    });
+    document.querySelector('#contact').addEventListener('mouseleave', () => {
+      document.getElementById("mouse-circle").style.borderColor = "#000000";
+    });
+  </script>
+</body>
+
+</html>

@@ -280,6 +280,12 @@
         <div>Ilustrator</div>
       </div>
     </a>
+    <a href="https://lab3-silk.vercel.app/">
+      <div id="project8">
+        <div>Weather API</div>
+        <div>JS</div>
+      </div>
+    </a>
   </div>
 
   <br><br><br><br><br><br><br><br><br><br>
@@ -379,6 +385,7 @@
     project5 = document.querySelector('#project5');
     project6 = document.querySelector('#project6');
     project7 = document.querySelector('#project7');
+    project8 = document.querySelector('#project8');
 
 
     project1.addEventListener("mouseover", () => {
@@ -434,6 +441,14 @@
       document.getElementById("mouse-circle").classList.add("mouse-circle-selected");
     });
     project7.addEventListener("mouseleave", () => {
+      document.getElementById("mouse-circle").style.backgroundImage = "none";
+      document.getElementById("mouse-circle").classList.remove("mouse-circle-selected");
+    });
+    project8.addEventListener("mouseover", () => {
+      document.getElementById("mouse-circle").style.backgroundImage = "url('/images/show8.webp')";
+      document.getElementById("mouse-circle").classList.add("mouse-circle-selected");
+    });
+    project8.addEventListener("mouseleave", () => {
       document.getElementById("mouse-circle").style.backgroundImage = "none";
       document.getElementById("mouse-circle").classList.remove("mouse-circle-selected");
     });

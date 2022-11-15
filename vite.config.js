@@ -7,7 +7,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         about: resolve(__dirname, 'aboutme.html'),
-        work: resolve(__dirname, 'work.html')
+        work: resolve(__dirname, 'mywork.html')
       }
     }
   }

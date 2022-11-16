@@ -13,9 +13,8 @@
   <meta property="og:type" content="">
   <meta property="og:image" content=https://res.cloudinary.com/dck3erw0v/image/upload/v1668164899/banner_xmlvvu.png>
   
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script type="module" src="/main.js"></script>
-
+  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -187,6 +186,39 @@
     <p>All rights reserved Aimane Maadal</p>
   </footer>
   <div id="mouse-circle"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 5500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+    //if window screen is less than 800px
+    if (window.innerWidth < 868) {
+      var swiper2 = new Swiper("#values", {
+        slidesPerView: 1,
+        freeMode: true,
+      });
+    } else {
+      var swiper2 = new Swiper("#values", {
+        slidesPerView: 2,
+        freeMode: true,
+      });
+    }
+  </script>
 
 </body>
 

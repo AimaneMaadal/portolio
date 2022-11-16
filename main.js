@@ -325,32 +325,3 @@ while (container.scrollLeft < 1000) {
   console.log(scrollLeft);
 }
 
-var swiper = new Swiper(".mySwiper", {
-  spaceBetween: 30,
-  centeredSlides: true,
-  autoplay: {
-    delay: 5500,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-
-//if window screen is less than 800px
-if (window.innerWidth < 868) {
-  var swiper2 = new Swiper("#values", {
-    slidesPerView: 1,
-    freeMode: true,
-  });
-} else {
-  var swiper2 = new Swiper("#values", {
-    slidesPerView: 2,
-    freeMode: true,
-  });
-}

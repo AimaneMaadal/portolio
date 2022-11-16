@@ -484,7 +484,7 @@ header a {
   }
 
   #values {
-
+    background-size: 20%;
     background-position: 80% 30%;
   }
 
@@ -546,9 +546,6 @@ header a {
 
   }
 
-  .carousel {
-    background-size: 28%;
-  }
 
   h2 {
     font-size: 4vw;
@@ -563,8 +560,14 @@ header a {
     background-size: 90%;
   }
 
+  #values {
+    background-size: 30%;
+    background-position: 80% 50%;
+    height: 70vh;
+  }
+
   .item {
-    width: 100%;
+    width: 90%;
   }
 
   h2 {

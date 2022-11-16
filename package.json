@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "@splidejs/splide": "^4.1.3",
-    "horizontal-scroll": "^1.1.0",
     "textify.js": "^1.2.2",
     "three": "^0.145.0"
   }

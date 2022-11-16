@@ -1,7 +1,6 @@
 import './style.css'
 import * as THREE from 'three'
 import Textify from "textify.js";
-import HorizontalScroll from 'horizontal-scroll';
 import {
   GLTFLoader
 } from 'three/examples/jsm/loaders/GLTFLoader.js';
@@ -44,20 +43,13 @@ light2.position.set(2, 50, 3);
 let light = new THREE.AmbientLight(0xffffff, 1);
 scene.add(light, light2);
 
-var scale = 1.5;
+
 
 renderer.setSize(sizes.width, sizes.height);
 scene.background = new THREE.Color('#FFFFFF');
 document.body.appendChild(renderer.domElement);
 camera.position.z = 5;
 
-//create plane geometry
-var geometry = new THREE.PlaneGeometry(7.7, 5, 1, 1);
-var material = new THREE.MeshBasicMaterial({
-  color: 0x000000,
-  side: THREE.DoubleSide,
-  radius: 0.5,
-});
 
 
 
@@ -79,7 +71,7 @@ gltfLoader.load('/images/laptop.glb', (gltf) => {
   if (window.innerWidth < 768) {
     Mesh.scale.set(0.5, 0.5, 0.5);
   } else {
-    Mesh.scale.set(scale, scale, scale);
+    Mesh.scale.set(1.5, 1.5, 1.5);
   }
   Mesh.position.set(0, -1, 0);
   scene.add(Mesh);
@@ -333,3 +325,32 @@ while (container.scrollLeft < 1000) {
   console.log(scrollLeft);
 }
 
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+    delay: 5500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+//if window screen is less than 800px
+if (window.innerWidth < 868) {
+  var swiper2 = new Swiper("#values", {
+    slidesPerView: 1,
+    freeMode: true,
+  });
+} else {
+  var swiper2 = new Swiper("#values", {
+    slidesPerView: 2,
+    freeMode: true,
+  });
+}

@@ -74,7 +74,7 @@ function onMouseMove(event) {
   Mesh.rotation.y = mouse.x * 0.1;
 }
 
-gltfLoader.load('/images/laptop.gltf', (gltf) => {
+gltfLoader.load('/images/laptop.glb', (gltf) => {
   Mesh = gltf.scene;
   if (window.innerWidth < 768) {
     Mesh.scale.set(0.5, 0.5, 0.5);
@@ -250,7 +250,7 @@ country.addEventListener("mouseleave", () => {
 });
 
 city.addEventListener("mouseover", () => {
-  document.getElementById("mouse-circle").style.backgroundImage = "url('/images/dino.gif')";
+  document.getElementById("mouse-circle").style.backgroundImage = "url('/images/dino.webp')";
   document.getElementById("mouse-circle").classList.add("mouse-circle-selected");
 });
 

@@ -1,6 +1,7 @@
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 
+
 export default defineConfig({
   build: {
     rollupOptions: {
@@ -8,7 +9,6 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         about: resolve(__dirname, 'aboutme.html'),
         work: resolve(__dirname, 'mywork.html'),
-        sitemap: resolve(__dirname, 'sitemap.xml')
       }
     }
   }

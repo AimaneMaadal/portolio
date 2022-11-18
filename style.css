@@ -317,6 +317,20 @@ footer p {
   font-size: 0.5vw;
   text-align: center;
 }
+footer i{
+  color: #ffffff;
+}
+footer i:hover{
+  color: #b3b3b3;
+  text-decoration: none;
+}
+footer ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
 
 header {
   z-index: 11;
@@ -530,6 +544,9 @@ header a {
   .brand {
     width: 50%;
     height: 40vw
+  }
+  .brand img{ 
+    fill: aqua;
   }
 
   #close {

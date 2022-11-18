@@ -118,8 +118,8 @@ h2 {
   position: relative;
 }
 
-.container h1 .name,
-.container h1 .country {
+.container h2 .name,
+.container h2 .country {
   text-decoration: underline;
   cursor: pointer;
 }
@@ -261,7 +261,6 @@ h2 {
 }
 
 h2 {
-  margin-left: 10%;
   margin-top: 0px;
   font-size: 3vw;
 }
@@ -296,7 +295,7 @@ footer {
 
 }
 
-footer h1 {
+footer h2 {
   font-weight: 300;
   font-style: italic;
 }
@@ -305,7 +304,10 @@ footer span {
   font-style: normal;
   font-weight: 700;
   font-style: normal;
-
+}
+.swiper-slide a{
+  color: #000000;
+  text-decoration: none;
 }
 
 footer p {
@@ -333,6 +335,9 @@ header ul li {
 header a {
   text-decoration: none;
   color: #000000;
+}
+#title_clients{
+  margin-left: 10%;
 }
 
 #mobile-menu {
@@ -421,6 +426,9 @@ header a {
     width: 90%;
     font-size: 3rem;
   }
+  #values .swiper-wrapper {
+    margin-left: 5%;
+  }
 
   body {
     cursor: default;
@@ -448,7 +456,7 @@ header a {
     margin-left: 5%;
   }
 
-  .item h1 {
+  .item h2 {
     font-size: 3rem;
   }
 
@@ -504,7 +512,7 @@ header a {
     margin-top: 0;
   }
 
-  .item h1 {
+  .item h2 {
     font-size: 2rem !important;
   }
 
@@ -547,7 +555,7 @@ header a {
   }
 
 
-  h2 {
+  #title_clients {
     font-size: 4vw;
     margin-left: 5%;
   }

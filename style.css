@@ -94,6 +94,9 @@ h2 {
   background-size: 8%;
   background-position: 70% 50%;
 }
+h1{
+  font-size: 16px;
+}
 
 #values .swiper-slide {
   height: 450px;

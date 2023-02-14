@@ -8,6 +8,7 @@ body {
   gap: 5vw;
   overflow-x: hidden !important;
   cursor: none;
+  background-color: #ffffff;
 }
 
 #mouse-circle {
